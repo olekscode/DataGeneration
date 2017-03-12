@@ -15,11 +15,11 @@
 (function(window, document){
     // Refers to the "importer", which is index.html
     var thatDoc = document;
-    // Refers to the "importee", which is code-editor.html
+    // Refers to the "importee", which is code-edit.html
     var thisDoc = (document._currentScript || document.currentScript).ownerDocument;
 
     // Gets content from <template>
-    var template = thisDoc.querySelector('template#code-editor').content;
+    var template = thisDoc.querySelector('template#code-edit').content;
 
     class CodeEdit extends HTMLElement {
         // getter/setter for value property
