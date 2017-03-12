@@ -50,7 +50,6 @@ class LinearRegressionClassifier {
         for (let entry of data) {
             delta = entry.y - (this.weights[0] + this.weights[1] * entry.x);
             derivatives[0] += delta;
-            console.log(derivatives[0]);
 
             for (let i = 0; i < this.input_size + 1; ++i) {
                 // TODO: Make data.x an array data[i].x[j]
@@ -82,7 +81,7 @@ class LinearRegressionClassifier {
             cost_prev = cost_curr;
             cost_curr = this.cost(data);
         }
-        console.log("Cost: " + cost_curr);
+        // console.log("Cost: " + cost_curr);
 
         return this.weights;
     }
